@@ -20,14 +20,10 @@ Extrae el token JWT desde la cookie
 Autentica al usuario con estrategia **JWT** de Passport  
 Devuelve los datos del usuario autenticado  
 
-💡 **Todas las rutas son testeables desde Postman**. No es necesario contar con interfaz visual para esta entrega.
+**Todas las rutas son testeables desde Postman**
+**Archivo Auth JWT Ecommerce.postman_collection para importar**
 
----
 
-## 📁 Archivos relevantes para la entrega
-
-⚠️ **IMPORTANTE:** Los archivos que **no llevan el ícono ✅** no son requeridos para esta entrega, pero forman parte de la estructura general del proyecto.  
-**No es necesario chequearlos para corregir.**
 
 ```plaintext
 =======
@@ -63,9 +59,6 @@ No es necesario contar con interfaz visual para esta entrega.
 ⚠️ IMPORTANTE: Los archivos que no llevan el ícono ✅ no son requeridos para esta entrega, pero forman parte de la estructura general del proyecto.
 No es necesario chequearlos para corregir.
 
-pgsql
-Copiar
-Editar
 >>>>>>> 565af0877849f0a022d40b5ec4c61193500efd20
 ├── config/
 │   └── passport.js            ✅ Configuración de Passport con JWT
