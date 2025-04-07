@@ -59,7 +59,6 @@ No es necesario contar con interfaz visual para esta entrega.
 ⚠️ IMPORTANTE: Los archivos que no llevan el ícono ✅ no son requeridos para esta entrega, pero forman parte de la estructura general del proyecto.
 No es necesario chequearlos para corregir.
 
->>>>>>> 565af0877849f0a022d40b5ec4c61193500efd20
 ├── config/
 │   └── passport.js            ✅ Configuración de Passport con JWT
 ├── models/
