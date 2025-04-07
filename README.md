@@ -1,5 +1,6 @@
 ## ⚙️ Funcionalidades desarrolladas en esta entrega
 
+<<<<<<< HEAD
 Esta entrega implementa un sistema completo de **autenticación y autorización de usuarios** mediante **JWT**, **Passport** y **cookies**.
 
 ### Funciones principales:
@@ -29,6 +30,43 @@ Devuelve los datos del usuario autenticado
 **No es necesario chequearlos para corregir.**
 
 ```plaintext
+=======
+Funciones principales:
+✅ Registro de usuarios → POST /api/sessions/register
+
+Crea un nuevo usuario con contraseña encriptada utilizando bcrypt
+
+Valida que el email no exista previamente
+
+Asocia un carrito vacío al usuario y asigna el rol por defecto (user)
+
+✅ Login con JWT → POST /api/sessions/login
+
+Verifica credenciales con validación de contraseña hasheada
+
+Si son correctas, genera un token JWT
+
+Devuelve el token alojado en una cookie segura (jwtCookie)
+
+✅ Ruta protegida /current → GET /api/sessions/current
+
+Extrae el token JWT desde la cookie
+
+Autentica al usuario con estrategia jwt de Passport
+
+Devuelve los datos del usuario autenticado
+
+💡 Todas las rutas son testeables desde Postman.
+No es necesario contar con interfaz visual para esta entrega.
+
+📁 Archivos relevantes para la entrega
+⚠️ IMPORTANTE: Los archivos que no llevan el ícono ✅ no son requeridos para esta entrega, pero forman parte de la estructura general del proyecto.
+No es necesario chequearlos para corregir.
+
+pgsql
+Copiar
+Editar
+>>>>>>> 565af0877849f0a022d40b5ec4c61193500efd20
 ├── config/
 │   └── passport.js            ✅ Configuración de Passport con JWT
 ├── models/
