@@ -1,6 +1,5 @@
 ## ⚙️ Funcionalidades desarrolladas en esta entrega
 
-<<<<<<< HEAD
 Esta entrega implementa un sistema completo de **autenticación y autorización de usuarios** mediante **JWT**, **Passport** y **cookies**.
 
 ### Funciones principales:
