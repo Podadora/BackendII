@@ -24,7 +24,8 @@ Devuelve los datos del usuario logueado
 
 
 IMPORTANTE :Los archivos que no llevan ✅, no son necesarios para la entrega pero funcionan de contencion para todo el proyecto (no es necesario chequearlos)
-
+ 
+ 
 ├── config/
 │   └── passport.js               # ✅Configuración de Passport con JWT
 ├── models/
