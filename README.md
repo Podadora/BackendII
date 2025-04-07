@@ -2,46 +2,56 @@
 Esta entrega implementa un sistema completo de autenticación y autorización de usuarios mediante JWT, Passport y cookies.
 
 Funciones principales:
-✅ Registro de usuarios (/api/sessions/register)
+✅ Registro de usuarios → POST /api/sessions/register
 
-Crea usuarios con contraseña encriptada (bcrypt)
+Crea un nuevo usuario con contraseña encriptada utilizando bcrypt
 
-Guarda cart asociado y rol por defecto (user)
+Valida que el email no exista previamente
 
-✅ Login con JWT (/api/sessions/login)
+Asocia un carrito vacío al usuario y asigna el rol por defecto (user)
 
-Devuelve un token JWT alojado en una cookie segura (jwtCookie)
+✅ Login con JWT → POST /api/sessions/login
 
-Valida contraseña hasheada
+Verifica credenciales con validación de contraseña hasheada
 
-✅ Ruta protegida /current (/api/sessions/current)
+Si son correctas, genera un token JWT
 
-Extrae el JWT desde la cookie
+Devuelve el token alojado en una cookie segura (jwtCookie)
 
-Autentica el usuario con estrategia Passport-JWT
+✅ Ruta protegida /current → GET /api/sessions/current
 
-Devuelve los datos del usuario logueado
+Extrae el token JWT desde la cookie
 
+Autentica al usuario con estrategia jwt de Passport
 
-IMPORTANTE :Los archivos que no llevan ✅, no son necesarios para la entrega pero funcionan de contencion para todo el proyecto (no es necesario chequearlos)
- 
- 
+Devuelve los datos del usuario autenticado
+
+💡 Todas las rutas son testeables desde Postman.
+No es necesario contar con interfaz visual para esta entrega.
+
+📁 Archivos relevantes para la entrega
+⚠️ IMPORTANTE: Los archivos que no llevan el ícono ✅ no son requeridos para esta entrega, pero forman parte de la estructura general del proyecto.
+No es necesario chequearlos para corregir.
+
+pgsql
+Copiar
+Editar
 ├── config/
-│   └── passport.js               # ✅Configuración de Passport con JWT
+│   └── passport.js            ✅ Configuración de Passport con JWT
 ├── models/
-│   ├── cart.js                   # Modelo de carrito
-│   ├── product.js                # Modelo de producto
-│   └── user.js                   # ✅ Modelo de usuario (importante)
+│   ├── cart.js                Modelo de carrito
+│   ├── product.js             Modelo de producto
+│   └── user.js                ✅ Modelo de usuario con hashing y validaciones
 ├── routes/
-│   ├── carts.js                  # Rutas de carritos
-│   ├── products.js               # Rutas de productos
-│   ├── sessions.js               # ✅ Rutas de autenticación y JWT
-│   └── views.js                  # Rutas para vistas (no relevantes)
+│   ├── carts.js               Rutas de carritos
+│   ├── products.js            Rutas de productos
+│   ├── sessions.js            ✅ Rutas de autenticación y JWT
+│   └── views.js               Rutas para vistas (no utilizadas en esta entrega)
 ├── utils/
-│   └── hash.js                   # ✅ Funciones de hash para contraseñas
-├── views/                        # Vistas con Handlebars (no necesarias para esta entrega)
-├── public/                       # Archivos estáticos (no necesarios para esta entrega)
+│   └── hash.js                ✅ Funciones de hash y comparación de contraseñas
+├── views/                     Vistas con Handlebars (no necesarias para esta entrega)
+├── public/                    Archivos estáticos (no necesarios para esta entrega)
 ├── .gitignore
-├── app.js                        # ✅ App principal con configuración de middlewares y rutas
+├── app.js                     ✅ App principal con configuración de rutas y middlewares
 ├── package.json
 ├── README.md
